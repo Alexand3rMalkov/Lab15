@@ -7,13 +7,13 @@
 #define N 20
 
 int main() {
-	int sum= 0;
+	int sum = 0;
 	int sredarif = 0;
 	int array[N][M];
 	setlocale(LC_ALL, "rus");
 	for (int i = 0; i < N; i++) {
 		for (int j = 0; j < M; j++) {
-			array[i][j] = rand() % 10;
+			array[i][j] = (rand() % 4) + 1;
 		}
 
 	}
@@ -30,9 +30,9 @@ int main() {
 				sum += array[i][j];
 				sredarif += 1;
 			}
-			sum /= sredarif;
 		}
 
 	}
+	sum /= sredarif;
 	printf("Средняя оценка по класу в целом: %d", sum);
 }
